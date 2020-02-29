@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  rest:
+    build:
+     context: ./
+     dockerfile: Dockerfile
+    image: thimico/api
+    container_name: rest
+    ports:
+      - 8080:8080
