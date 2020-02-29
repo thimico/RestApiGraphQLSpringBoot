@@ -1,0 +1,37 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    allPersons: [Person]
+    person(id: ID!): Person
+}
+
+type Person {
+    id: ID!
+    name: String!
+    childrenNames: [String]
+    age: Int
+    partner: Person
+}
+
+type Mutation {
+    createPerson(intput: CreatePersonInput!) : Person!
+    setPartner(input: SetPartnerInput!) : Person!
+    deletePerson(id: ID!) : Boolean!
+}
+
+
+input CreatePersonInput {
+    name: String!
+    childrenNames: [String]
+    age: Int
+}
+
+input SetPartnerInput {
+    id: ID!
+    name: String!
+    childrenNames: [String]
+    age: Int
+}

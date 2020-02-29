@@ -1,4 +1,4 @@
-package com.thimico.input;
+package com.thimico.dto;
 
 import lombok.*;
 
@@ -8,7 +8,7 @@ import java.util.Set;
  * @author <a href="mailto:thg.mnzs@gmail.com">Thiago Menezes</a>
  */
 @Data
-public class CreatePersonInput {
+public class CreatePersonDto {
 
     private String name;
 
